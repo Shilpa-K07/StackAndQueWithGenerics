@@ -12,5 +12,7 @@ public class StackImplementation {
 	public NodeInf peak() {
 		return linkedList.head;
 	}
-	
+	public NodeInf pop() {
+		return linkedList.pop();
+	}
 }
