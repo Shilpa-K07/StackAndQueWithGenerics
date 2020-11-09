@@ -13,4 +13,7 @@ public class QueueImplementation {
 	public NodeInf element() {
 		return linkedList.head;
 	}
+	public NodeInf pop() {
+		return linkedList.pop();
+	}
 }
