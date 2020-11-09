@@ -62,4 +62,35 @@ public class StackAndQueueTest {
 		stack.printStack();
 		Assert.assertNotEquals(firstNode, result);
 	}
+	
+	//UC-3
+	@Test
+	public void givenThreeNumbersWhenAddedToQueueShouldHsveFirstAddedElement() {
+		LinkedListNode<Integer> firstNode = new LinkedListNode<>(70);
+		LinkedListNode<Integer> secondNode = new LinkedListNode<>(30);
+		LinkedListNode<Integer> thirdNode = new LinkedListNode<>(56);
+
+		QueueImplementation queue = new QueueImplementation();
+		queue.add(firstNode);
+		queue.add(secondNode);
+		queue.add(thirdNode);
+		NodeInf result = queue.element();
+		queue.printStack();
+		Assert.assertEquals(firstNode, result);
+	}
+	
+	@Test
+	public void givenThreeNumbersWhenAddedToQueueShouldNotHsveFirstAddedElement() {
+		LinkedListNode<Integer> firstNode = new LinkedListNode<>(70);
+		LinkedListNode<Integer> secondNode = new LinkedListNode<>(30);
+		LinkedListNode<Integer> thirdNode = new LinkedListNode<>(56);
+
+		QueueImplementation queue = new QueueImplementation();
+		queue.add(firstNode);
+		queue.add(secondNode);
+		queue.add(thirdNode);
+		NodeInf result = queue.element();
+		queue.printStack();
+		Assert.assertNotEquals(thirdNode, result);
+	}
 }
